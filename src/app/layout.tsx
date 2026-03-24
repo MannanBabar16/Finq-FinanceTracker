@@ -1,3 +1,4 @@
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
 import { cookies } from "next/headers";
 import localFont from "next/font/local";
@@ -34,6 +35,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} min-h-screen bg-background font-sans text-foreground antialiased`}
       >
         <AppProviders initialCurrency={initialCurrency}>{children}</AppProviders>
+        <SpeedInsights />
       </body>
     </html>
   );
